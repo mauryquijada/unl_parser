@@ -1,8 +1,7 @@
 unl_parser.py
 =============
 
-Author: Maury Quijada
-Created on May 10, 2013
+By Maury Quijada, created on May 10, 2013
 
 This program takes in a .unl file as outputted from an Informix UNLOAD
 database command and converts the data into a CSV file at a specified location.
