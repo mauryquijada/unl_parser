@@ -29,10 +29,12 @@ def main():
 
 	# Eliminate new lines that are within the delimiter.
 	inputFile = givenFile.read()
-	inputFile = inputFile.replace("\\\r\n", " ")
 
 	# Take the given file and convert it line-by-line into a CSV.
-	for line in inputFile.splitlines():
+	for line in inputFile.split(args.d + "\r"):
+		# Add the delimiter to the end of the line (removed in above step).
+		line += args.d
+
 		# Create an array representing each column and eliminate whitespace.
 		splitLine = line.split(args.d)
 		splitLine = ["" if val.isspace() else val.strip() for val in splitLine]
